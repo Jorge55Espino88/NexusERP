@@ -4,20 +4,20 @@ Filosofía: Simplicidad, Estructura y Modularidad.
 📍 Fase 0: El ADN del Sistema (Cimientos)
 Objetivo: Definir la estética y las piezas básicas.
 
-[ ] Configuración Global: Crear carpeta NexusERP/ y archivos main.py.
+[X] Configuración Global: Crear carpeta NexusERP/ y archivos main.py.
 
-[ ] CSS Python: Archivo gui/styles/colors.py con la paleta oficial.
+[X] CSS Python: Archivo gui/styles/colors.py con la paleta oficial.
 
-[ ] Átomos UI: Creación de componentes base (PrimaryButton, CustomEntry).
+[X] Átomos UI: Creación de componentes base (PrimaryButton, CustomEntry).
 
-[ ] Sistema de Alertas: Componente visual para notificaciones (NotificationToast).
+[X] Sistema de Alertas: Componente visual para notificaciones (NotificationToast).
 
 🔑 Fase 1: Control de Acceso (Login & Seguridad)
 Objetivo: Crear la "puerta de entrada" segura.
 
-[ ] Vista de Login: Interfaz limpia con customtkinter.
+[X] Vista de Login: Interfaz limpia con customtkinter.
 
-[ ] Servicio de Autenticación: Lógica para validar usuarios (usando un JSON local inicial).
+[X] Servicio de Autenticación: Lógica para validar usuarios (usando un JSON local inicial).
 
 [ ] Gestión de Sesión: El sistema debe "recordar" quién entró.
 
