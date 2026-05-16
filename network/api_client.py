@@ -6,7 +6,7 @@ import json
 class APIClient:
     def __init__(self):
         # URL de pruebas remota con datos simulados de personal y ERP
-        self.base_url = "https://raw.githubusercontent.com/Jorge55Espino88/NexusERP/main/mock_data.json"
+        self.base_url = "https://raw.githubusercontent.com/Jorge55Espino88/NexusERP/master/mock_data.json"
 
     def fetch_records(self):
         """Misión: Salir a internet, descargar el JSON y reportar los datos crudos"""

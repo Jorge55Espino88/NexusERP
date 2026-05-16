@@ -48,6 +48,20 @@ class NexusApp(ctk.CTk):
 
         print(f"🚀 [SISTEMA]: Dashboard principal desplegado con éxito.")
 
+        # === SIMULACRO DE OPERACIONES DE RED (TEMPORAL) ===
+        from network.api_client import APIClient
+        from core.data_mapper import DataMapper
+
+        # 1. Instanciamos el cliente y traemos los datos de tu GitHub
+        client = APIClient()
+        response = client.fetch_records()
+
+        # 2. Pasamos los datos por la aduana del Mapper
+        console_data = DataMapper.map_employees(response)
+
+        # 3. Imprimimos en consola para verificar el éxito de la misión
+        print(f"📡 [CONSOLA PRUEBA]: Datos listos para la tabla: {console_data}")
+
 if __name__ == '__main__':
     app = NexusApp()
     app.mainloop()

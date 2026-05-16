@@ -26,9 +26,9 @@ Objetivo: Crear la "puerta de entrada" segura.
 🌐 Fase 2: Conexión al Mundo (API & Datos)
 Objetivo: Consumir datos reales de internet.
 
-[ ] API Client: Crear el motor que se conecta al JSON en línea.
+[X] API Client: Crear el motor que se conecta al JSON en línea.
 
-[ ] Data Mapper: Limpiar y transformar los datos de la API (nombres, salarios, etc.).
+[X] Data Mapper: Limpiar y transformar los datos de la API (nombres, salarios, etc.).
 
 [ ] Tabla de Personas: Implementar la visualización usando el DataTable heredado.
 
