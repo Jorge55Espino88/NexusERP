@@ -1,7 +1,14 @@
 # gui/body/login_view.py
 import customtkinter as ctk
+
+from gui.components.notifications import NotificationToast
 from gui.styles.colors import BG_CARD, ACCENT_MAIN, TEXT_HIGH, TEXT_LOW, BG_DARK
 from gui.components.buttons import PrimaryButton
+# 🛡️ TRUCO MAESTRO: Importación condicional para evitar el bucle circular
+# Esto solo lo lee PyCharm para el autocompletado, Python lo ignora en ejecución.
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from main import NexusApp
 
 
 class LoginView(ctk.CTkFrame):
@@ -9,6 +16,7 @@ class LoginView(ctk.CTkFrame):
         # Usamos los colores de nuestra Fase 0
         super().__init__(parent, fg_color=BG_CARD, corner_radius=15)
         self.controller = controller  # Guardamos el enlace al cerebro (BackController)
+        self.master:"NexusApp" = parent
 
         # --- Interfaz Visual ---
         self.title_label = ctk.CTkLabel(
@@ -50,7 +58,10 @@ class LoginView(ctk.CTkFrame):
 
         if respuesta["success"]:
             print(f"✅ [SISTEMA]: Acceso concedido para {user}. Rol: {respuesta['role']}")
+            self.master.login_system(user,respuesta["role"])
         else:
             print(f"❌ [ALERTA]: {respuesta['message']}")
+            alerta = NotificationToast(self, text=respuesta["message"], is_success=False)
+            alerta.place(relx=0.5, rely=0.85, anchor="center")
 
 # cuando veas algo con on al principio, es como un listener. es como la bala que se dispara cuando el gatillo se aprieta

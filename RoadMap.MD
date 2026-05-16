@@ -19,9 +19,9 @@ Objetivo: Crear la "puerta de entrada" segura.
 
 [X] Servicio de Autenticación: Lógica para validar usuarios (usando un JSON local inicial).
 
-[ ] Gestión de Sesión: El sistema debe "recordar" quién entró.
+[X] Gestión de Sesión: El sistema debe "recordar" quién entró.
 
-[ ] Alertas de Seguridad: Notificaciones de "Acceso Denegado" o "Bienvenido".
+[X] Alertas de Seguridad: Notificaciones de "Acceso Denegado" o "Bienvenido".
 
 🌐 Fase 2: Conexión al Mundo (API & Datos)
 Objetivo: Consumir datos reales de internet.
