@@ -1,0 +1,28 @@
+{
+  "status": "success",
+  "company": "Nexus International",
+  "total_records": 3,
+  "employees": [
+    {
+      "id": "EMP-001",
+      "name": "Jorge Espino",
+      "role": "Superadmin",
+      "department": "Engineering",
+      "status": "Active"
+    },
+    {
+      "id": "EMP-002",
+      "name": "César Augusto",
+      "role": "Administrator",
+      "department": "Operations",
+      "status": "Active"
+    },
+    {
+      "id": "EMP-003",
+      "name": "Elena Rostova",
+      "role": "Operator",
+      "department": "Logistics",
+      "status": "On Leave"
+    }
+  ]
+}
