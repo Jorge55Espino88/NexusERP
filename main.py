@@ -1,6 +1,7 @@
 import customtkinter as ctk
 
 from gui.body.login_view import LoginView
+from gui.dashboard.main_dashboard import MainDashboard
 # --- Estilos ---
 from gui.styles.colors import BG_DARK
 
@@ -30,21 +31,22 @@ class NexusApp(ctk.CTk):
         self.login_screen.place(relx=0.5,rely=0.5,anchor="center")
 
     def login_system(self, user, role):
-        "Misión: Registrar sesión, destruir login y expandir pantalla"
+        "Misión: Registrar sesión, destruir login y levantar el Dashboard de Gala"
         self.current_user = user
         self.current_role = role
 
-        # 1. Limpieza de pantalla: Eliminamos el contenedor de login
+        # 1. Destruimos el login
         self.login_screen.destroy()
 
-        # 2. Reconfiguramos la ventana para el modo "Dashboard" (Más amplia)
+        # 2. Configuramos dimensiones profesionales
         self.geometry("1024x600")
-
-        # CORRECCIÓN AQUÍ: Usamos paréntesis () en lugar de =
         self.title(f"Nexus ERP - Panel Principal [{self.current_user.upper()}]")
 
-        # 3. Alerta táctica de control
-        print(f"🚀 [SESIÓN INICIADA]: {self.current_user} ha tomado el control con el rol: {self.current_role}")
+        # 3. Lanzamos el Dashboard Maestro pasándole los datos del operador
+        self.dashboard = MainDashboard(self, self.current_user, self.current_role)
+        self.dashboard.pack(fill="both", expand=True)
+
+        print(f"🚀 [SISTEMA]: Dashboard principal desplegado con éxito.")
 
 if __name__ == '__main__':
     app = NexusApp()
