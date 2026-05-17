@@ -1,5 +1,6 @@
 import customtkinter as ctk
 
+from gui import dashboard
 from gui.body.login_view import LoginView
 from gui.dashboard.main_dashboard import MainDashboard
 # --- Estilos ---
@@ -58,9 +59,8 @@ class NexusApp(ctk.CTk):
 
         # 2. Pasamos los datos por la aduana del Mapper
         console_data = DataMapper.map_employees(response)
-
-        # 3. Imprimimos en consola para verificar el éxito de la misión
-        print(f"📡 [CONSOLA PRUEBA]: Datos listos para la tabla: {console_data}")
+        # Inyectamos la lista limpia en el panel central
+        self.dashboard.center_panel.populate_table(console_data)
 
 if __name__ == '__main__':
     app = NexusApp()

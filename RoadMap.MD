@@ -30,7 +30,7 @@ Objetivo: Consumir datos reales de internet.
 
 [X] Data Mapper: Limpiar y transformar los datos de la API (nombres, salarios, etc.).
 
-[ ] Tabla de Personas: Implementar la visualización usando el DataTable heredado.
+[X] Tabla de Personas: Implementar la visualización usando el DataTable heredado.
 
 [ ] Integración de Alertas: Notificar cuando los datos se están cargando o si falló el internet.
 
